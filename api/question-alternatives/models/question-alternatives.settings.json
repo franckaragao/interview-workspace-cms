@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "question-alternatives",
+  "info": {
+    "name": "QuestionAlternatives"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "isCorrect": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "question": {
+      "via": "alternatives",
+      "model": "question"
+    }
+  }
+}

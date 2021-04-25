@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "question_answers",
+  "info": {
+    "name": "QuestionAnswer"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "OPENED",
+        "ALTERNATIVES"
+      ]
+    },
+    "answer": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

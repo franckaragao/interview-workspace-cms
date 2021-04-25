@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questions",
+  "info": {
+    "name": "Question",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "OPENED",
+        "ALTERNATIVES"
+      ],
+      "required": true,
+      "default": "OPENED",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "alternatives": {
+      "collection": "question-alternatives",
+      "via": "question"
+    },
+    "area": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "Essential",
+        "FrontEnd",
+        "BackEnd",
+        "Fullstack",
+        "DevOps"
+      ]
+    },
+    "categories": {
+      "collection": "tag",
+      "via": "questions",
+      "dominant": true
+    },
+    "answer": {
+      "model": "question-answer"
+    },
+    "interview": {
+      "model": "interview",
+      "via": "questions"
+    },
+    "title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
+    }
+  }
+}

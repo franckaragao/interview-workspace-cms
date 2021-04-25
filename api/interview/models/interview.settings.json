@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "interviews",
+  "info": {
+    "name": "Interview"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "candidate": {
+      "model": "candidate"
+    },
+    "questions": {
+      "via": "interview",
+      "collection": "question"
+    }
+  }
+}
